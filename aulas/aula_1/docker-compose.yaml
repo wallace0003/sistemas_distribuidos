@@ -1,0 +1,33 @@
+services:
+# Nome do container
+  container-1:
+    build:
+    # contexto que é a pasta atual
+      context: .
+    # dockerfile que ele vai ler, se não passar o arquivo ele pega o primeiro 
+      dockerfile: Dockerfile
+    # nome da imagem
+    image: cc7261:random
+    
+    # pasta compartilhada
+    #./pasta atual que vou para buscar o projeto :/app pasta onde vai ser migrado as coisas do container
+    volumes:
+      - ./src/container1.py:/app/main.py
+    # Tanto de replica que você que reaplicar pra mesma máquina.
+    deploy:
+      replicas: 10
+  container-2:
+    build:
+    # contexto que é a pasta atual
+      context: .
+    # dockerfile que ele vai ler, se não passar o arquivo ele pega o primeiro 
+      dockerfile: Dockerfile
+    # nome da imagem
+    image: cc7261:random
+    # pasta compartilhada
+    #./pasta atual que vou para buscar o projeto :/app pasta onde vai ser migrado as coisas do container
+    volumes:
+      - ./src/container2.py:/app/main.py
+    # Tanto de replica que você que reaplicar pra mesma máquina.
+    deploy:
+      replicas: 10

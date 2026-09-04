@@ -1,0 +1,7 @@
+#   Docker run é o que está na memória
+#    Docker build roda no disco.
+#   docker run -it teste python3 (roda esse comando dentro do container, fora da máquina.)
+
+# docker-compose up ou docker compose up.
+
+# quando tem mais que 1 container é obrigado a usar o flush no print
