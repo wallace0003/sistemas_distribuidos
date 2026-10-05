@@ -1,0 +1,3 @@
+subscriber demora pra conectar - pode perder a mensagem.
+publisher não espera para publicar.
+tópicos são padrões de mensagens - são um canal específico.

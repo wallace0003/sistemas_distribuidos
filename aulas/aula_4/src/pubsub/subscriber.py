@@ -8,6 +8,7 @@ sub.connect("tcp://publisher:5555")
 
 while True:
     message = sub.recv_string()
+    print(message.split(" "))
     print(f"message: {message}", flush=True)
 
 sub.close()
